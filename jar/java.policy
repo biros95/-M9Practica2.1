@@ -1,0 +1,15 @@
+//Un bloc de permisos
+
+keystore "origen.jks";
+grant SignedBy "desti" {
+
+
+permission java.util.PropertyPermission "user.dir", "read";
+permission java.util.PropertyPermission "file.separator", "read";
+permission java.io.FilePermission "*", "read, write";
+permission java.net.SocketPermission "*:80" , "connect, resolve";
+};
+
+grant {
+	permission java.util.PropertyPermission "user.dir", "read";
+};
